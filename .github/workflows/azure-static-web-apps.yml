@@ -16,6 +16,6 @@ jobs:
     with:
       azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
     inputs:
-      app_location: "/"
-      output_location: "/"
-      skip_app_build: true  # This skips the Oryx build step
+      app_location: "/" # Root directory of your app
+      output_location: "/" # Location of static files
+      skip_app_build: true # Skip build step
