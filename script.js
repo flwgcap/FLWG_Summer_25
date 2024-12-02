@@ -30,6 +30,20 @@ fetch('example.xlsx')
                 }
             }
         });
+
+        // Add search functionality
+        const searchBar = document.getElementById('searchBar');
+        searchBar.addEventListener('input', function() {
+            const query = searchBar.value.toLowerCase();
+            const rows = tableContainer.querySelectorAll('table tr');
+
+            rows.forEach((row, index) => {
+                if (index === 0) return; // Skip the header row
+                const cells = Array.from(row.cells);
+                const matches = cells.some(cell => cell.textContent.toLowerCase().includes(query));
+                row.style.display = matches ? '' : 'none';
+            });
+        });
     })
     .catch(err => {
         console.error("Error loading Excel file:", err);
