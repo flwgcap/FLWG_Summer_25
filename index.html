@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Assignments</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body.hidden {
+            visibility: hidden;
+        }
+        body.visible {
+            visibility: visible;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const password = "winter2024"; // Set your desired password here
+            document.body.classList.add('hidden'); // Hide content initially
+
+            const userPassword = prompt("Please enter the password to access this page:");
+
+            if (userPassword === password) {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('visible');
+            } else {
+                alert("Incorrect password. You cannot access this page.");
+                document.body.innerHTML = "<h1 style='text-align: center; color: red;'>Access Denied</h1>";
+                document.body.classList.remove('hidden');
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -21,7 +46,6 @@
         <!-- Search bar -->
         <div style="margin-bottom: 20px; text-align: center;">
             <input type="text" id="searchBar" placeholder="Search Any Column..." style="padding: 10px; width: 80%; max-width: 600px; font-size: 16px;">
-            
         </div>
 
         <div id="output">
