@@ -12,6 +12,20 @@
         body.visible {
             visibility: visible;
         }
+        .hat-colors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .hat-colors div {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            min-width: 150px;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -42,29 +56,17 @@
         <h1>Florida Wing, 2024-25 Winter Encampment Flight Assignments</h1>
 
         <!-- Squadron Hat Colors -->
-        <div style="margin: 20px 0; text-align: center;">
-            <h2>SQUADRON HAT COLORS</h2>
-
-            <p><strong>SQUADRON 1 - PURPLE</strong><br>
-            FLIGHT: A-B-C-D</p>
-
-            <p><strong>SQUADRON 2 - YELLOW</strong><br>
-            FLIGHT: E-F-G-H</p>
-
-            <p><strong>SQUADRON 3 - GREEN</strong><br>
-            FLIGHT: I-J-K-L</p>
-
-            <p><strong>SQUADRON 4 - MAROON</strong><br>
-            FLIGHT: M-N-O-P</p>
-
-            <p><strong>SQUADRON 5 - LIGHT BLUE</strong><br>
-            FLIGHT: Q-R-S-T</p>
-
-            <p><strong>ADVANCED TRAINING SQUADRON - TAN</strong></p>
-
-            <p><strong>BLACK - Cadre</strong></p>
-
-            </p><strong>NAVY - Senior Members</strong></p>
+        <h3>Squadron Hat Colors</h3>
+        <p>Each squadron has a unique hat color. The flight assignments below can be used to help narrow down your cadet in photos based on there hat color.</p>
+        <div class="hat-colors">
+            <div><strong>SQUADRON 1</strong><br>PURPLE<br>FLIGHT: A-B-C-D</div>
+            <div><strong>SQUADRON 2</strong><br>YELLOW<br>FLIGHT: E-F-G-H</div>
+            <div><strong>SQUADRON 3</strong><br>GREEN<br>FLIGHT: I-J-K-L</div>
+            <div><strong>SQUADRON 4</strong><br>MAROON<br>FLIGHT: M-N-O-P</div>
+            <div><strong>SQUADRON 5</strong><br>LIGHT BLUE<br>FLIGHT: Q-R-S-T</div>
+            <div><strong>ADVANCED TRAINING</strong><br>TAN</div>
+            <div><strong>BLACK</strong><br>Cadre</div>
+            <div><strong>NAVY</strong><br>Senior Members</div>
         </div>
 
         <h4>Search by Name, or Flight</h4>
