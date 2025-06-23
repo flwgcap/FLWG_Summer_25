@@ -1,4 +1,4 @@
-fetch('example.xlsx')
+fetch('COLORED_ROSTERS.xlsx')
     .then(response => response.arrayBuffer())
     .then(data => {
         const workbook = XLSX.read(data, { type: 'array' });
